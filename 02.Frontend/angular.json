@@ -27,9 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/sac.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/e93ce6ba26.js",
+              "node_modules/gsap/src/gsap-core.js"
+            ]
           },
           "configurations": {
             "production": {
