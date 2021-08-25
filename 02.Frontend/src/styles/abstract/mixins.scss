@@ -1,0 +1,25 @@
+@mixin refont($px) {
+  $font-size-body-px: $px;
+  $font-size-body: $font-size-body-px / 16 * 100%;
+  body { font-size: $font-size-body; }
+}
+
+@function em($px: $line-height-px, $font-size: $font-size-body-px) {
+  @return $px / $font-size * 1em;
+}
+
+@function rem($px: $line-height-px, $font-size: $font-size-body-px) {
+  @return $px / $font-size * 1rem;
+}
+
+@function pc($px: $line-height-px, $standard: $font-size-body-px) {
+  @return $px / $standard * 100%;
+}
+
+@mixin font-size($px, $standard: $font-size-body-px) {
+  font-size: pc($px,$standard);
+}
+
+@mixin line-height($line-height: $line-height-px, $font-size: $font-size-body-px) {
+  line-height: em($line-height, $font-size);
+}

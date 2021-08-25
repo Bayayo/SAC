@@ -1,0 +1,38 @@
+$main-font: 'Montserrat', sans-serif;
+
+$font-size-body-px: 14;
+$line-height-px: 21;
+
+$font-size-body: pc($font-size-body-px, 16);
+$line-height: em($line-height-px, $font-size-body-px);
+
+$font-weights: (
+    "bold" : 800,
+    "regular" : 600,
+    "light" : 400
+);
+
+/* COLORES TEXTOS */
+
+$txt-titulos:#1B1B1B;
+$txt-sub-titulo:#444444;
+$txt-normal:#3f3f3f;
+$txt-claro:#565C65;
+$txt-gris:#d6d6d6;
+$txt-blanco:#ffffff;
+
+
+/* COLORES GENERAL */
+
+$header-color: linear-gradient(0deg, #4836CC 0%, #4882E9 100%);
+$color-principal:#4882E9;
+$color-secundario:#6557D1;
+$color-verde-p:#33D39A;
+$color-anaranjado-p:#F39C12;
+$color-rojo-p:#CB0B3D;
+
+
+/* COLORES FONDOS */
+
+$main-bkg: #F4F4F4;
+

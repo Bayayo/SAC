@@ -17,22 +17,27 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sac",
+            "progress": true,
+            "extractCss": true,
+            "outputPath": "SACFront",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/js"
             ],
             "styles": [
               "src/styles/sac.scss"
             ],
             "scripts": [
               "src/js/e93ce6ba26.js",
+              "src/js/nada.js",
               "node_modules/gsap/src/gsap-core.js"
-            ]
+            ],
+            "baseHref": "/Sac/"
           },
           "configurations": {
             "production": {
@@ -50,14 +55,24 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
+              "buildOptimizer": true
+            },
+            "qa": {
+              "fileReplacements": [
                 {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
                 }
-              ]
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
             }
           }
         },
